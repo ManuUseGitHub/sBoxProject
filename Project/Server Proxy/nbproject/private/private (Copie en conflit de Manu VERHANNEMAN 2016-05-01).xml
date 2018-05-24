@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/bmxau_000/Dropbox/xBoxReseau/Server/src/Server/versionning/ProjectsInfo.java</file>
+            <file>file:/C:/Users/bmxau_000/Dropbox/xBoxReseau/Server/src/Server/Programm.java</file>
+            <file>file:/C:/Users/bmxau_000/Dropbox/xBoxReseau/Server/src/Server/versionning/lecteurFichier.java</file>
+            <file>file:/C:/Users/bmxau_000/Dropbox/xBoxReseau/Server/src/Server/versionning/XML/impl/ProjectXMLParser.java</file>
+            <file>file:/C:/Users/bmxau_000/Dropbox/xBoxReseau/Server/src/Server/commit/CommitTaskAnalyser.java</file>
+            <file>file:/C:/Users/bmxau_000/Dropbox/xBoxReseau/Server/src/Server/versionning/XML/impl/ImporteurClientImpl.java</file>
+            <file>file:/C:/Users/bmxau_000/Dropbox/xBoxReseau/Server/src/Server/pull/PullParser.java</file>
+            <file>file:/C:/Users/bmxau_000/Dropbox/xBoxReseau/Server/src/Server/versionning/XML/DocExplicite.java</file>
+            <file>file:/C:/Users/bmxau_000/Dropbox/xBoxReseau/Server/src/Server/commit/MyZip.java</file>
+            <file>file:/C:/Users/bmxau_000/Dropbox/xBoxReseau/Server/src/Server/pull/PullTaskController.java</file>
+            <file>file:/C:/Users/bmxau_000/Dropbox/xBoxReseau/Server/src/Server/versionning/XML/Exporter.java</file>
+            <file>file:/C:/Users/bmxau_000/Dropbox/xBoxReseau/Server/src/Server/Server.java</file>
+            <file>file:/C:/Users/bmxau_000/Dropbox/xBoxReseau/Server/src/Server/versionning/Profil.java</file>
+            <file>file:/C:/Users/bmxau_000/Dropbox/xBoxReseau/Server/src/Server/versionning/XML/ConverterToXML.java</file>
+            <file>file:/C:/Users/bmxau_000/Dropbox/xBoxReseau/Server/src/Server/versionning/XML/impl/projectsExporter.java</file>
+            <file>file:/C:/Users/bmxau_000/Dropbox/xBoxReseau/Server/src/Server/create/CreateTaskController.java</file>
+            <file>file:/C:/Users/bmxau_000/Dropbox/xBoxReseau/Server/src/Server/versionning/XML/impl/ProjectListXMLParser.java</file>
+            <file>file:/C:/Users/bmxau_000/Dropbox/xBoxReseau/Server/src/Server/versionning/Project.java</file>
+            <file>file:/C:/Users/bmxau_000/Dropbox/xBoxReseau/Server/src/Server/commit/CommitTaskController.java</file>
+            <file>file:/C:/Users/bmxau_000/Dropbox/xBoxReseau/Server/test/Server/versionning/XML/ExporteurClientImplTest.java</file>
+            <file>file:/C:/Users/bmxau_000/Dropbox/xBoxReseau/Server/src/Server/create/CreateTaskAnalyser.java</file>
+            <file>file:/C:/Users/bmxau_000/Dropbox/xBoxReseau/Server/src/Server/ServerController.java</file>
+            <file>file:/C:/Users/bmxau_000/Dropbox/xBoxReseau/Server/src/Server/pull/PullTaskAnalyser.java</file>
+        </group>
+    </open-files>
+</project-private>

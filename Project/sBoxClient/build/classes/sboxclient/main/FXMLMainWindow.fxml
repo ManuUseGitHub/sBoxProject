@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sboxclient.main.FXMLMainWindowController">
+  <children>
+    <BorderPane prefHeight="594.0" prefWidth="963.0" style="&#10;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <center>
+        <AnchorPane prefHeight="594.0" prefWidth="963.0">
+          <children>
+            <BorderPane id="" fx:id="BorderPaneTab" prefHeight="531.0" prefWidth="963.0" visible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <bottom>
+                <BorderPane id="stepshower" prefHeight="41.0" prefWidth="749.0">
+                  <left>
+                    <Label fx:id="progressText" text="..." textFill="#bfbfbf" />
+                  </left>
+                  <right>
+                    <Label fx:id="progressPourcentage" text="0 %" textAlignment="LEFT">
+                      <textFill>
+                        <Color blue="0.625" green="0.625" red="0.625" fx:id="x3" />
+                      </textFill>
+                    </Label>
+                  </right>
+                  <top>
+                    <ProgressBar fx:id="progress" minHeight="5.0" prefHeight="11.0" prefWidth="963.0" progress="0.0" />
+                  </top>
+                </BorderPane>
+              </bottom>
+              <center>
+                <TabPane fx:id="tabPane" disable="false" prefHeight="468.0" prefWidth="963.0" rotateGraphic="false" side="TOP" tabClosingPolicy="UNAVAILABLE" visible="true">
+                  <tabs>
+                    <Tab onSelectionChanged="#setCreateTab" text="Create project">
+                      <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" visible="true">
+                          <children>
+                            <Label text="Création de projets" underline="false" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                              <font>
+                                <Font size="24.0" fx:id="x2" />
+                              </font>
+                            </Label>
+                            <BorderPane prefHeight="100.0" prefWidth="200.0" styleClass="process" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+                              <center>
+                                <Label id="lblFeedBackProjectCreation" fx:id="lblCreationProcessFeedBack" alignment="CENTER" prefHeight="-1.0" prefWidth="-1.0" text=". . ." textAlignment="CENTER" textFill="#205e2a" BorderPane.alignment="CENTER">
+                                  <BorderPane.margin>
+                                    <Insets />
+                                  </BorderPane.margin>
+                                </Label>
+                              </center>
+                              <top>
+                                <Button mnemonicParsing="false" onAction="#createProject" prefWidth="-1.0" text="Create project in sBox" />
+                              </top>
+                            </BorderPane>
+                            <HBox alignment="CENTER" layoutY="42.0" prefHeight="289.0" prefWidth="953.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                              <children>
+                                <TitledPane animated="false" collapsible="false" prefWidth="600.0" text="Mes projets">
+                                  <content>
+                                    <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                      <children>
+                                        <SplitPane disable="false" dividerPositions="0.6207482993197279" focusTraversable="true" prefHeight="180.0" prefWidth="296.0" styleClass="split" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                          <items>
+                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="null">
+                                              <children>
+                                                <TextField id="txtFieldProjectName" fx:id="txtFieldCreateName" prefWidth="200.0" promptText="enter your project name here" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                                                <Label text="Nouveau" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                                  <font>
+                                                    <Font size="18.0" fx:id="x1" />
+                                                  </font>
+                                                </Label>
+                                                <Label id="lblFeedBackIdCreation" fx:id="lblCreationIdFeedBack" prefWidth="345.9999000000025" text=". . ." AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="50.0" />
+                                              </children>
+                                            </AnchorPane>
+                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                              <children>
+                                                <ListView fx:id="lstProjectList" prefHeight="178.0" prefWidth="114.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                              </children>
+                                            </AnchorPane>
+                                          </items>
+                                        </SplitPane>
+                                      </children>
+                                    </AnchorPane>
+                                  </content>
+                                </TitledPane>
+                              </children>
+                            </HBox>
+                          </children>
+                        </AnchorPane>
+                      </content>
+                    </Tab>
+                    <Tab onSelectionChanged="#setCommitTab" text="Commit">
+                      <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                          <children>
+                            <Label font="$x2" text="Commit a project" underline="false" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                            <BorderPane prefHeight="100.0" prefWidth="935.0" styleClass="process" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+                              <center>
+                                <Label id="lblFeedBackCommit" fx:id="lblCommitProcessFeedBack" alignment="CENTER" prefHeight="-1.0" prefWidth="-1.0" styleClass="fillHorizontal" text=". . ." textAlignment="CENTER" />
+                              </center>
+                              <top>
+                                <Button mnemonicParsing="false" onAction="#commit" prefHeight="-1.0" prefWidth="-1.0" text="Commit" />
+                              </top>
+                            </BorderPane>
+                            <HBox alignment="CENTER" layoutY="39.0" prefHeight="294.0" prefWidth="947.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0">
+                              <children>
+                                <AnchorPane prefHeight="248.0" prefWidth="600.0">
+                                  <children>
+                                    <TitledPane animated="false" collapsible="false" expanded="true" minWidth="570.0" prefHeight="130.0" prefWidth="717.0" text="Select directory to commit:" underline="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                      <content>
+                                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="81.0" prefWidth="636.0">
+                                          <children>
+                                            <Label id="lblFeedBackCommitId" fx:id="lblCommitSourceFolderFeedback" prefHeight="-1.0" text=". . ." AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="50.0" />
+                                            <TextField id="txtFieldCommitId" fx:id="txtFieldCommitSourceFolder" prefWidth="624.0" text="" AnchorPane.leftAnchor="160.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="5.0" />
+                                            <Button mnemonicParsing="false" onAction="#choseAProjectLocationToCommit" prefHeight="0.0" prefWidth="150.0" text="Select project location" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                                          </children>
+                                        </AnchorPane>
+                                      </content>
+                                    </TitledPane>
+                                    <TitledPane animated="false" collapsible="false" contentDisplay="LEFT" prefHeight="136.0" prefWidth="717.0" text="Select project to commit:" textAlignment="CENTER" textOverrun="ELLIPSIS" underline="false" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <content>
+                                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                          <children>
+                                            <TextField fx:id="txtFieldCommitId" prefWidth="150.0" text="" AnchorPane.leftAnchor="160.0" AnchorPane.topAnchor="5.0" />
+                                            <Label id="lblFeedBackCommitId" fx:id="lblCommitIdFeedBack" prefWidth="604.0" text=". . ." AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="50.0" />
+                                            <ComboBox fx:id="comboBoxCommitProjectName" onAction="#setTxtFieldCommit" prefHeight="-1.0" prefWidth="150.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                                          </children>
+                                        </AnchorPane>
+                                      </content>
+                                    </TitledPane>
+                                  </children>
+                                </AnchorPane>
+                              </children>
+                            </HBox>
+                          </children>
+                        </AnchorPane>
+                      </content>
+                    </Tab>
+                    <Tab onSelectionChanged="#setPullTab" text="Pull">
+                      <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                          <children>
+                            <Label font="$x2" text="Pull a project" underline="false" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                            <BorderPane prefHeight="100.0" prefWidth="200.0" styleClass="process" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+                              <center>
+                                <Label id="lblPullFeedBack" fx:id="lblPullProcessFeedBack" alignment="CENTER" prefHeight="-1.0" prefWidth="-1.0" text=". . ." />
+                              </center>
+                              <top>
+                                <Button mnemonicParsing="false" onAction="#pull" prefHeight="-1.0" prefWidth="-1.0" text="Pull" />
+                              </top>
+                            </BorderPane>
+                            <HBox alignment="CENTER" layoutY="39.0" prefHeight="295.0" prefWidth="935.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+                              <children>
+                                <AnchorPane prefHeight="278.0" prefWidth="600.0">
+                                  <children>
+                                    <TitledPane animated="false" collapsible="false" prefHeight="130.0" text="destination du rappatriement" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                      <content>
+                                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                          <children>
+                                            <TextField id="txtFieldPullId" fx:id="txtfPullDestinationFolder" layoutY="5.0" prefHeight="-1.0" prefWidth="760.0" promptText="location" text="C:\Users\bmxau_000\Documents\Depos" AnchorPane.leftAnchor="160.0" AnchorPane.rightAnchor="5.0" />
+                                            <Button mnemonicParsing="false" onAction="#choseADirectoryToPullProject" prefHeight="-1.0" prefWidth="150.0" text="Choisir" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                                            <Label id="lblFeedBackPullUrl" fx:id="lblPullDestinationFolderFeedBack" text=". . ." AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="50.0" />
+                                          </children>
+                                        </AnchorPane>
+                                      </content>
+                                    </TitledPane>
+                                    <TitledPane animated="false" collapsible="false" prefHeight="130.0" prefWidth="600.0" text="project name" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <content>
+                                        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                          <children>
+                                            <Label id="lblFeedBackPullId" fx:id="lblPullIdFeedBack" alignment="TOP_LEFT" prefHeight="-1.0" prefWidth="-1.0" text=". . ." textAlignment="LEFT" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="50.0" />
+                                            <ComboBox fx:id="comboBoxPlullProjectName" onAction="#setTxtFieldPull" prefHeight="-1.0" prefWidth="160.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                              <items>
+                                                <FXCollections fx:factory="observableArrayList">
+                                                  <String fx:value="Item 1" />
+                                                  <String fx:value="Item 2" />
+                                                  <String fx:value="Item 3" />
+                                                </FXCollections>
+                                              </items>
+                                            </ComboBox>
+                                            <TextField fx:id="txtFieldPullId" prefHeight="-1.0" prefWidth="150.0" AnchorPane.leftAnchor="170.0" AnchorPane.topAnchor="5.0" />
+                                          </children>
+                                        </AnchorPane>
+                                      </content>
+                                    </TitledPane>
+                                  </children>
+                                </AnchorPane>
+                              </children>
+                            </HBox>
+                          </children>
+                        </AnchorPane>
+                      </content>
+                    </Tab>
+                  </tabs>
+                </TabPane>
+              </center>
+            </BorderPane>
+            <BorderPane id="" fx:id="BorderPaneConnexion" prefHeight="531.0" prefWidth="963.0" styleClass="requestConnection" visible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <center>
+                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" styleClass="null">
+                  <children>
+                    <HBox alignment="CENTER" prefHeight="282.0" prefWidth="963.0">
+                      <children>
+                        <Pane fx:id="paneConnection" prefHeight="268.0" prefWidth="579.0" visible="true">
+                          <children>
+                            <TextField id="lblIpServeur" fx:id="txtFIpServeur" alignment="CENTER" layoutX="194.0" layoutY="54.0" prefHeight="31.0" prefWidth="346.0" promptText="0.0.0.0" text="192.168.1.12" visible="true" />
+                            <TextField id="lblPort" fx:id="txtFPort" alignment="CENTER" layoutX="194.0" layoutY="104.0" prefHeight="31.0" prefWidth="346.0" promptText="0000" text="4000" />
+                            <Label labelFor="$txtFIpServeur" layoutX="45.0" layoutY="54.0" prefHeight="31.0" prefWidth="149.0" text="HOST/IP" textAlignment="LEFT" />
+                            <Label labelFor="$txtFPort" layoutX="42.0" layoutY="104.0" prefHeight="29.0" prefWidth="148.0" text="PORT" textAlignment="LEFT" />
+                            <Label fx:id="lblFeedBackConnection" alignment="CENTER" layoutX="14.0" layoutY="242.0" prefHeight="21.0" prefWidth="552.0" text="..." textAlignment="CENTER" />
+                            <TextField id="" fx:id="txtFPseudo" layoutX="194.0" layoutY="154.0" prefHeight="31.0" prefWidth="346.0" promptText="John Doe" text="Maze" />
+                            <Label labelFor="$txtFPseudo" layoutX="43.0" layoutY="159.0" prefHeight="20.999900000002526" prefWidth="147.0" text="PSEUDO" textAlignment="LEFT" />
+                            <Button layoutX="117.0" layoutY="211.0" mnemonicParsing="false" onAction="#seConnecterAuServeur" prefHeight="31.0" prefWidth="346.0" text="Se connecter au serveur proxy" />
+                          </children>
+                          <effect>
+                            <DropShadow color="$x3" />
+                          </effect>
+                        </Pane>
+                      </children>
+                    </HBox>
+                  </children>
+                </VBox>
+              </center>
+            </BorderPane>
+          </children>
+        </AnchorPane>
+      </center>
+      <top>
+        <AnchorPane prefHeight="64.0" prefWidth="963.0" style="-fx-background-color:#555;">
+          <children>
+            <Label alignment="CENTER" text="*** sBox ***" textAlignment="CENTER" textFill="$x3" underline="false" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+              <font>
+                <Font name="Levenim MT Bold" size="36.0" />
+              </font>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#quitter" text="Quitter" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+          </children>
+        </AnchorPane>
+      </top>
+    </BorderPane>
+  </children>
+  <stylesheets>
+    <URL value="@../../ressources/style.css" />
+  </stylesheets>
+</AnchorPane>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<profil>
+  <profilName>Antoine</profilName>
+  <projects>
+    <project version="0">
+      <name>first</name>
+    </project>
+    <project version="0">
+      <name>secound</name>
+    </project>
+    <project version="1">
+      <name>first</name>
+    </project>
+  </projects>
+</profil>

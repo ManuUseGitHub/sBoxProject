@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<profil>
+  <profilName>jean</profilName>
+  <projects>
+    <project version="0">
+      <name>projo</name>
+    </project>
+    <project version="1">
+      <name>projix</name>
+    </project>
+    <project version="150">
+      <name>pokemon</name>
+    </project>
+  </projects>
+</profil>
